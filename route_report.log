@@ -1,0 +1,153 @@
+Qflow route logfile created on Mon Jun 22 21:35:25 UTC 2026
+qrouter -noc  -s full_adder.cfg
+Qrouter detail maze router version 1.4.71.T
+Cannot open 9x15 font
+Reading LEF data from file /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef.
+LEF Read, Line 191: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 192: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 196: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 197: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 207: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 208: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 212: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 213: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 223: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 224: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 228: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 229: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 239: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 240: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 244: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 245: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 255: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 256: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 260: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 261: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site core (ignored)
+LEF read: Processed 2941 lines.
+LEF Read: encountered 0 errors and 20 warnings total.
+Vertical route layer at non-minimum pitch 1.6.  Using smaller pitch 0.8, will route on 1-of-2 tracks for layer metal6.
+Reading DEF data from file full_adder.def.
+Diagnostic: Design name: "full_adder"
+  Processed 5 vias total.
+  Processed 17 subcell instances total.
+  Processed 7 pins total.
+  Processed 14 nets total (0 fixed).
+  Processed 2 special nets total (4 fixed).
+DEF read: Processed 171 lines.
+Output scale = microns / 100, precision 1
+No antenna cell defined!
+There are 16 nets in this design.
+*** Running stage1 routing with defaults
+Finished routing net b
+Nets remaining: 15
+Finished routing net cin
+Nets remaining: 14
+Finished routing net _4_
+Nets remaining: 13
+Finished routing net a
+Nets remaining: 12
+Finished routing net _6_
+Nets remaining: 11
+Finished routing net _0_
+Nets remaining: 10
+Finished routing net _3_
+Nets remaining: 9
+Finished routing net _5_
+Nets remaining: 8
+Finished routing net _1_
+Nets remaining: 7
+Finished routing net _2_
+Nets remaining: 6
+Finished routing net _8_
+Nets remaining: 5
+Finished routing net _7_
+Nets remaining: 4
+Finished routing net Cout
+Nets remaining: 3
+Finished routing net S
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 24
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Finished routing net b
+Nets remaining: 15
+Finished routing net cin
+Nets remaining: 14
+Finished routing net _4_
+Nets remaining: 13
+Finished routing net a
+Nets remaining: 12
+Finished routing net _6_
+Nets remaining: 11
+Finished routing net _0_
+Nets remaining: 10
+Finished routing net _3_
+Nets remaining: 9
+Keeping route for net _5_
+Finished routing net _1_
+Nets remaining: 7
+Finished routing net _2_
+Nets remaining: 6
+Keeping route for net _8_
+Keeping route for net _7_
+Keeping route for net Cout
+Finished routing net S
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 44
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Finished routing net b
+Nets remaining: 15
+Finished routing net cin
+Nets remaining: 14
+Finished routing net _4_
+Nets remaining: 13
+Finished routing net a
+Nets remaining: 12
+Finished routing net _6_
+Nets remaining: 11
+Finished routing net _0_
+Nets remaining: 10
+Finished routing net _3_
+Nets remaining: 9
+Keeping route for net _5_
+Finished routing net _1_
+Nets remaining: 7
+Finished routing net _2_
+Nets remaining: 6
+Keeping route for net _8_
+Keeping route for net _7_
+Keeping route for net Cout
+Finished routing net S
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 64
+No failed routes!
+----------------------------------------------
+*** Writing DEF file full_adder_route.def
+emit_routes():  DEF file has 14 nets and 4 specialnets.
+but qrouter wants to write 16 nets and specialnets.
+----------------------------------------------
+Final: No failed routes!
+----------------------------------------------
+*** Writing RC file full_adder_route.rc
+DEF2Verilog -v /home/shlok/vlsi_tools/adder_project/full_adder.rtlnopwr.v -o /home/shlok/vlsi_tools/adder_project/full_adder_postroute.v
+-p vdd -g gnd  -l  /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef full_adder_route.def
+
+Generating RTL verilog and SPICE netlist file in directory
+   /home/shlok/vlsi_tools/adder_project
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd -o full_adder.rtl.anno.v full_adder_postroute.v
+vlog2Verilog -c -p -v vdd -g gnd -o full_adder.rtlnopwr.anno.v full_adder_postroute.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -b -p -n -v vdd -g gnd -o full_adder.rtlbb.anno.v full_adder_postroute.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp -o full_adder.anno.spc full_adder.rtl.anno.v
+Router script ended on Mon Jun 22 21:35:25 UTC 2026
